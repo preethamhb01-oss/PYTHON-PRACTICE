@@ -1,10 +1,21 @@
-import calendar
-y = int(input("Enter the year :  "))
+class InputDevice:
+    def input(self):
+        pass
 
-m = int(input("Enter the number of month :  "))
-if y <3000 and m <=12:
+class Keyboard(InputDevice):
+    def input(self):
+        return "User typing..."
+
+class Mouse(InputDevice):
+    def input(self):
+        return "Mouse clicked"
+
+class Computer:
+    def __init__(self, device: InputDevice):
+        self.device = device
+
+    def get_input(self):
+        return self.device.input()
     
-    print(calendar.month(y, m))
-    
-else:
-    print("only limited eddition if want for every year then take premium at ₹ 999")
+a= Computer(Mouse)
+print(a.get_input(1))
