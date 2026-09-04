@@ -2,7 +2,7 @@ print("DAY 31")
 while True :
     try:
         print()
-        a = input("Enter Your favorite super Hero (No space btw name ) :     ")
+        a = input("Enter Your favorite super Hero (No space btw name ) :   ")
         
         if a.upper() !="IRONMAN":
             raise Exception("You choose Wrong Super hero ")
